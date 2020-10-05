@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "calligraphic";
+  src: local("calligraphic"), url("font/ofont.ru_Caslon Becker.ttf");
+}
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #000000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+header {
+  padding-top: 10px;
+  min-height: 50px;
+  background-color: #009999;
+  text-align: right;
+}
+header b {
+  font-size: 2em;
+  font-family: calligraphic, serif;
+  color: #ffffff;
+  margin-right: 1%;
+}
+header b *:only-child {
+  color: lightcoral;
+}
+
+.container {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pic-wrap {
+  flex-grow: 2;
+  margin: 1px;
+  padding: 1em;
+  text-align: center;
+  background-color: #009999;
+}
+.pic-wrap img {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  max-width: 100%;
+  min-width: 200px;
+}
+
+.inp-form {
+  margin: 1px;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #04859D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inp-form div {
+  border: #009999 dotted 2px;
+  padding: 5%;
+  margin-top: 3%;
+}
+.inp-form :last-child button[type^=reset] {
+  background-color: darkgoldenrod;
+}
+.inp-form :last-child button[type^=submit] {
+  background-color: darkgreen;
+}
+
+.input_alert {
+  visibility: hidden;
+  color: #FF7400;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  max-width: 100px;
+}
+
+.table-wrap {
+  margin: 1px;
+  text-align: center;
+  padding: 10px;
+  background-color: #04859D;
+  flex-grow: 2;
+}
+.table-wrap table {
+  width: 100%;
+  padding: 0;
+}
+.table-wrap table th {
+  border: solid black 3px;
+  padding: 10px;
+  margin: 0;
+  background-color: #009999;
+}
+.table-wrap table td {
+  border: solid black 2px;
+  background-color: #5CCCCC;
+}
+.table-wrap table td::before {
+  border: solid black 2px;
+  background-color: #ffffff;
+}
+
+footer {
+  flex: 0 0 auto;
+  background-color: #009999;
+  text-align: center;
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
