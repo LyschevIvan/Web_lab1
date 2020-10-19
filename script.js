@@ -2,7 +2,8 @@ $(document).ready(function (){
     let y_inp = $(".y-input")
     let inp_form = $(".inp-form")
     const onChange = function (){
-        let val_Y = $(".y-input").val().replace(',', '.')
+        y_inp.val(y_inp.val().replace(/[^0-9,.]/g, ''))
+        let val_Y = y_inp.val().replace(',', '.')
         let re = new RegExp('^-?[0-9]+(\.[0-9]+)?$')
         if(re.test(val_Y)){
             if((parseFloat(val_Y) >= -3)&&(parseFloat(val_Y) <= 5)) {
