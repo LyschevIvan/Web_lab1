@@ -3,10 +3,19 @@ session_start();
 $start = microtime(true);
 date_default_timezone_set("Europe/Moscow");
 $now = date("H:i:s");
+$x = 0;
+$y = 0;
+$r = 0;
+if(is_numeric($_POST["x-inp"])){
+    $x = $_POST["x-inp"];
+}
+if(is_numeric($_POST["y-inp"])){
+    $y = $_POST["y-inp"];
+}
+if(is_numeric($_POST["r-inp"])){
+    $r = $_POST["r-inp"];
+}
 
-$x = $_POST["x-inp"];
-$y = $_POST["y-inp"];
-$r = $_POST["r-inp"];
 $in_zone = false;
 if (($x <= 0)and($y>=0)){
     if(($x >= -1*$r)and($y <= $r)){
